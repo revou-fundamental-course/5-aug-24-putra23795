@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector("form");
     const outputDiv = document.querySelector(".output");
-  
+    
     form.addEventListener("submit", function(event) {
       event.preventDefault();
       
@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
       // Tampilkan hasil
       outputDiv.innerHTML = `
-        <p>BMI Anda adalah: <h1>${bmi.toFixed(2)}</h1></p>
-        <p>Kategori: ${kategori}</p>
+        <p>BMI Anda adalah <h1>${bmi.toFixed(2)}</h1></p>
+        <p>Kategori ${kategori}</p>
       `;
 
 

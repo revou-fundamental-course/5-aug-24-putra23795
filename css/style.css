@@ -24,7 +24,7 @@ p {
   color: #555;
   text-align: justify;
   margin: 1px 25px;
-  /* width: 600px; */
+  max-width: 75%;
 }
 
 /* Content */
@@ -36,6 +36,7 @@ p {
   border: 1px solid transparent;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
   border-radius: 35px;
+  max-width: 600px;
 }
 
 /* radio */
@@ -176,7 +177,11 @@ button:active {
   margin-top: 10px;
 }
 
-/* output */
+/* Content, output */
+.container-output{
+  max-width: 600px;
+}
+
 .container-output h1 {
   font-size: 16px;
   margin-top: 1px;
@@ -197,4 +202,14 @@ button:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.container-output p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+  margin: 1px 25px;
+  margin-top: 20px;
 }
