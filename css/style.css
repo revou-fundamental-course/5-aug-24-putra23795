@@ -33,12 +33,9 @@ p {
   padding: 10px;
   margin: 40px;
   margin-top: 25px;
-  width: 500px;
-  height: 400px;
   border: 1px solid transparent;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
   border-radius: 35px;
-  justify-content: center;
 }
 
 /* radio */
@@ -118,6 +115,8 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 8px 23px;
   font-size: 13px;
   border-radius: 50px;
+  width: 85%;
+  box-sizing: border-box;
   color: #979797;
   box-shadow: rgb(255, 254, 254) 0px -23px 25px 0px inset,
     rgba(184, 184, 184, 0.23) 0px -36px 30px 0px inset,
@@ -125,11 +124,6 @@ input[type="number"]::-webkit-outer-spin-button {
     rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
     rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
     rgba(0, 0, 0, 0.09) 0px 32px 16px;
-}
-
-.container .input {
-  width: 75%;
-  height: 20px;
 }
 
 .container h5 {
@@ -141,10 +135,10 @@ input[type="number"]::-webkit-outer-spin-button {
 button {
   margin: 10px;
   padding: 1.3em 3em;
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
-  font-weight: 500;
+  font-weight: 400;
   color: #000;
   background-color: #fff;
   border: none;
@@ -153,6 +147,7 @@ button {
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
+  flex-direction: row;
 }
 
 button:hover {
@@ -182,10 +177,18 @@ button:active {
 }
 
 /* output */
+.container-output h1 {
+  font-size: 16px;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  
+}
+
 .output {
   background-color: rgb(239, 237, 237);
   width: 550px;
-  height: 350px;
+  height: 300px;
   margin-right: 25px;
   border: 1px solid transparent;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
@@ -194,5 +197,4 @@ button:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }

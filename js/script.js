@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
   
       // Tampilkan hasil
       outputDiv.innerHTML = `
-        <h5>Hasil BMI</h5>
         <p>BMI Anda adalah: <h1>${bmi.toFixed(2)}</h1></p>
         <p>Kategori: ${kategori}</p>
       `;
@@ -56,12 +55,17 @@ document.addEventListener("DOMContentLoaded", function() {
     // kesimpulan.appendChild(kesimpulanIsi);
     // kesimpulan.style.margin = "2rem";
     // outputSection.appendChild(kesimpulan);
+    // const sblOutput = document.querySelectorAll("h3");
+    // sblOutput[0].remove();
+    // sblOutput[1].remove();
 
     });
   
     // Reset form
-    const resetButton = form.querySelector(".bg-reset");
-    resetButton.addEventListener("click", function() {
+    // Reset form
+    const resetButton = form.querySelectorAll(".button")[1]; // Seleksi tombol reset dengan index kedua
+    resetButton.addEventListener("click", function(event) {
+      event.preventDefault(); // Cegah reset default untuk melakukan custom reset
       form.reset();
       outputDiv.innerHTML = ""; // Kosongkan output ketika form direset
     });
