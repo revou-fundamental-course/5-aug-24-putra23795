@@ -6,6 +6,8 @@ html,
 
 main {
   display: flex;
+  width: 100%;
+  height: auto;
 }
 
 /* Header */
@@ -24,7 +26,7 @@ p {
   color: #555;
   text-align: justify;
   margin: 1px 25px;
-  max-width: 75%;
+  width: 75%;
 }
 
 /* Content */
@@ -36,7 +38,19 @@ p {
   border: 1px solid transparent;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
   border-radius: 35px;
-  max-width: 600px;
+  max-width: 65vh;
+}
+
+/* Responsif */
+@media (max-width: 760px) {
+  h1,
+  p,
+  .container,
+  .radio-input,
+  .input,
+  button {
+    width: 100%;
+  }
 }
 
 /* radio */
@@ -116,7 +130,7 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 8px 23px;
   font-size: 13px;
   border-radius: 50px;
-  width: 85%;
+  width: 60vh;
   box-sizing: border-box;
   color: #979797;
   box-shadow: rgb(255, 254, 254) 0px -23px 25px 0px inset,
@@ -162,24 +176,15 @@ button:active {
   transform: translateY(-1px);
 }
 
-.container-section2 .judul {
-  font-weight: bold;
-}
 
-.container-section2 div p {
-  margin-left: 40px;
-}
-
-.header .header-1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 17px;
-  margin-left: 20px;
-  margin-top: 10px;
+.content-ul{
+  margin-left: 44px;
 }
 
 /* Content, output */
-.container-output{
+.container-output {
   max-width: 600px;
+  width: 100%;
 }
 
 .container-output h1 {
@@ -187,7 +192,6 @@ button:active {
   margin-top: 1px;
   display: flex;
   align-items: center;
-  
 }
 
 .output {
@@ -204,7 +208,7 @@ button:active {
   align-items: center;
 }
 
-.container-output p{
+.container-output p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.6;
