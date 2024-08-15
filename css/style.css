@@ -4,10 +4,13 @@ html,
   padding: 0;
 }
 
+body{}
+
 main {
-  display: flex;
   width: 100%;
   height: auto;
+  display: flex;
+  justify-content: space-around;
 }
 
 /* Header */
@@ -38,27 +41,17 @@ p {
   border: 1px solid transparent;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
   border-radius: 35px;
-  max-width: 65vh;
+  max-width: 70vh;
 }
 
-/* Responsif */
-@media (max-width: 760px) {
-  h1,
-  p,
-  .container,
-  .radio-input,
-  .input,
-  button {
-    width: 100%;
-  }
-}
+
 
 /* radio */
-.radio-input input {
+.container-radio input {
   display: none;
 }
 
-.radio-input {
+.container-radio {
   font-family: Arial, Helvetica, sans-serif;
   --container_width: 250px;
   position: relative;
@@ -73,7 +66,7 @@ p {
   border: 1px solid rgba(53, 52, 52, 0.226);
 }
 
-.radio-input label {
+.container-radio label {
   width: 100%;
   padding: 10px;
   cursor: pointer;
@@ -97,20 +90,20 @@ p {
   transition: 0.15s ease;
 }
 
-.radio-input label:has(input:checked) {
+.container-radio label:has(input:checked) {
   color: #fff;
 }
 
-.radio-input label:has(input:checked) ~ .selection {
+.container-radio label:has(input:checked) ~ .selection {
   background-color: rgb(12, 12, 12);
   display: inline-block;
 }
 
-.radio-input label:nth-child(1):has(input:checked) ~ .selection {
+.container-radio label:nth-child(1):has(input:checked) ~ .selection {
   transform: translateX(calc(var(--container_width) * 0 / 2));
 }
 
-.radio-input label:nth-child(2):has(input:checked) ~ .selection {
+.container-radio label:nth-child(2):has(input:checked) ~ .selection {
   transform: translateX(calc(var(--container_width) * 1 / 2));
 }
 
@@ -183,7 +176,6 @@ button:active {
 
 /* Content, output */
 .container-output {
-  max-width: 600px;
   width: 100%;
 }
 
@@ -196,15 +188,16 @@ button:active {
 
 .output {
   background-color: rgb(239, 237, 237);
-  width: 550px;
+  width: 75vh;
   height: 300px;
-  margin-right: 25px;
+  /* margin-right: 25px; */
   border: 1px solid transparent;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
   border-radius: 35px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -216,4 +209,57 @@ button:active {
   text-align: justify;
   margin: 1px 25px;
   margin-top: 20px;
+}
+
+/* Responsif */
+@media (max-width: 1024px) {
+
+  main{
+    flex-wrap: wrap;
+  }
+
+  .container-output {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .output {
+    width: 65vh;
+    height: 30vh;
+    margin: 10px;
+  }
+
+  .container-output p{
+    margin-left: ;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .container-output{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container-output h1{
+    margin: 8px;
+  }
+  
+  .output {
+    width: 30vh;
+    height: 50vw;
+    padding: 20px; 
+    font-size: 12px; 
+  }
+
+  button {
+    padding: 1em 2em; 
+  }
+
+  .input {
+    width: 90%; 
+  }
 }

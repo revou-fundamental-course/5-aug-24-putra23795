@@ -36,38 +36,14 @@ document.addEventListener("DOMContentLoaded", function() {
         <p>BMI Anda adalah <h1>${bmi.toFixed(2)}</h1></p>
         <p>Kategori ${kategori}</p>
       `;
-
-
-    //   
-    
-    // const hasil = document.createElement("h3");
-    // const teksHasil = document.createTextNode("Hasil BMI");
-    // hasil.appendChild(teksHasil);
-    // hasil.style.margin = "2rem";
-    // const outputSection = document.getElementsByTagName("section")[0];
-    // const output = document.getElementById("output");
-    // outputSection.insertBefore(hasil, output);
-
-    // output.innerHTML = `<p>BMI Anda adalah: ${bmi.toFixed(2)}</p>`;
-
-    // const kesimpulan = document.createElement("h3");
-    // const kesimpulanIsi = document.createTextNode(`Kategori : ${kategori}`);
-    // kesimpulan.appendChild(kesimpulanIsi);
-    // kesimpulan.style.margin = "2rem";
-    // outputSection.appendChild(kesimpulan);
-    // const sblOutput = document.querySelectorAll("h3");
-    // sblOutput[0].remove();
-    // sblOutput[1].remove();
-
     });
   
     // Reset form
-    // Reset form
     const resetButton = form.querySelectorAll(".button")[1]; // Seleksi tombol reset dengan index kedua
     resetButton.addEventListener("click", function(event) {
-      event.preventDefault(); // Cegah reset default untuk melakukan custom reset
+      event.preventDefault(); 
       form.reset();
-      outputDiv.innerHTML = ""; // Kosongkan output ketika form direset
+      outputDiv.innerHTML = ""; 
     });
   });
   
