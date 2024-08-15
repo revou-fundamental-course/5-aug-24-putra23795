@@ -232,7 +232,7 @@ button:active {
   }
 
   .container-output p{
-    margin-left: ;
+    margin-left: 0px;
   }
 }
 
@@ -262,4 +262,15 @@ button:active {
   .input {
     width: 90%; 
   }
+}
+
+/* footer */
+.social-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-brands {
+  width: 1em;
 }
