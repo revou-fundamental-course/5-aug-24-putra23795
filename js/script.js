@@ -30,12 +30,15 @@ document.addEventListener("DOMContentLoaded", function() {
       } else {
         kategori = "Obesitas";
       }
-  
+
       // Tampilkan hasil
       outputDiv.innerHTML = `
         <p>BMI Anda adalah <h1>${bmi.toFixed(2)}</h1></p>
         <p>Kategori ${kategori}</p>
+        <button>Download Hail BMI</button>
       `;
+
+      this.style.innerHTML
     });
   
     // Reset form
